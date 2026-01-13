@@ -1,4 +1,4 @@
-# Image Denoising & Enhancement using Digital Image Processing (MATLAB)
+# Image Denoising & Enhancement
 
 <p align="center">
   <b>A MATLAB-based Digital Image Processing project focused on noise modeling, denoising, enhancement, and quantitative evaluation using core ECE concepts.</b>
@@ -38,10 +38,6 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Gaussian Noise | Statistical noise with normal distribution | Sensors, thermal noise |
 | Salt & Pepper Noise | Random black & white pixels | Transmission errors |
 
-<p align="center">
-  <img src="image.jpeg" width="40%">
-</p>
-
 ---
 
 ## 🧹 Denoising Techniques
@@ -51,10 +47,6 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Mean Filter | Gaussian | Spatial averaging |
 | Median Filter | Salt & Pepper | Edge-preserving |
 | Wiener Filter | Adaptive | Minimum MSE optimization |
-
-<p align="center">
-  <img src="image2.jpg" width="85%">
-</p>
 
 ---
 
@@ -92,7 +84,7 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Wiener Filter | Lowest | Best |
 
 <p align="center">
-  <img src="assets/metrics_plot.png" width="70%">
+  <img src="assets/metrics_plot.png" width="40%">
 </p>
 
 ---
@@ -108,10 +100,37 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Edge Image | Structural extraction |
 
 <p align="center">
-  <img src="assets/final_comparison.png" width="90%">
+  <img src="assets/final_comparison.png" width="40%">
 </p>
 
 ---
+
+## 🔬 Visual Comparison: Before vs After Image Processing
+
+### 🔹 Image Set 1: Noise Removal Effect
+
+| Before Processing (Noisy Image) | After Processing (Denoised Image) |
+|--------------------------------|----------------------------------|
+| <img src="image.jpeg width="100%"> | <img src="image.jpeg" width="100%"> |
+
+<p align="center">
+  <i>Visible reduction of Gaussian and Salt & Pepper noise using Median and Wiener filtering.</i>
+</p>
+
+---
+
+### 🔹 Image Set 2: Enhancement & Edge Detection Effect
+
+| Before Enhancement | After Enhancement & Edge Detection |
+|--------------------|-----------------------------------|
+| <img src="image2.jpg" width="100%"> | <img src="image2.jpg" width="100%"> |
+
+<p align="center">
+  <i>Improved contrast using histogram equalization and structural feature extraction using Sobel operator.</i>
+</p>
+
+---
+
 
 ## 🏥 Applications
 
