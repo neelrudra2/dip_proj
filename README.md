@@ -60,10 +60,6 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 - Sobel Operator
 - Extracts prominent structural boundaries
 
-<p align="center">
-  <img src="assets/enhancement_edges.png" width="40%">
-</p>
-
 ---
 
 ## 📊 Performance Evaluation
@@ -98,10 +94,6 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Filtered Image | Noise suppression |
 | Enhanced Image | Contrast improvement |
 | Edge Image | Structural extraction |
-
-<p align="center">
-  <img src="assets/final_comparison.png" width="40%">
-</p>
 
 ---
 
