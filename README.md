@@ -1,7 +1,7 @@
 # 🖼️ Image Denoising & Enhancement using Digital Image Processing (MATLAB)
 
 <p align="center">
-  <img src="assets/banner.png" width="85%">
+  <img src="image.jpeg" width="85%">
 </p>
 
 <p align="center">
