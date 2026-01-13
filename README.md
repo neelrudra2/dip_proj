@@ -1,7 +1,7 @@
 # 🖼️ Image Denoising & Enhancement using Digital Image Processing (MATLAB)
 
 <p align="center">
-  <img src="image.jpeg" width="85%">
+  <img src="imagea.jpeg" width="85%">
 </p>
 
 <p align="center">
@@ -43,7 +43,7 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Salt & Pepper Noise | Random black & white pixels | Transmission errors |
 
 <p align="center">
-  <img src="assets/noise_comparison.png" width="80%">
+  <img src="image.jpeg" width="80%">
 </p>
 
 ---
@@ -57,7 +57,7 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Wiener Filter | Adaptive | Minimum MSE optimization |
 
 <p align="center">
-  <img src="assets/denoising_results.png" width="85%">
+  <img src="image2.jpeg" width="85%">
 </p>
 
 ---
