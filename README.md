@@ -16,23 +16,6 @@
 
 ---
 
-## 📌 Table of Contents
-- [Project Overview](#-project-overview)
-- [Key Objectives](#-key-objectives)
-- [Noise Models Implemented](#-noise-models-implemented)
-- [Denoising Techniques](#-denoising-techniques)
-- [Image Enhancement & Feature Extraction](#-image-enhancement--feature-extraction)
-- [Performance Evaluation](#-performance-evaluation)
-- [Results & Visual Output](#-results--visual-output)
-- [Applications](#-applications)
-- [How to Run](#-how-to-run)
-- [Project Structure](#-project-structure)
-- [Tools & Technologies](#-tools--technologies)
-- [Future Improvements](#-future-improvements)
-- [Author](#-author)
-
----
-
 ## 🔍 Project Overview
 
 This project demonstrates **real-world image degradation and restoration** using **classical Digital Image Processing (DIP) techniques** in MATLAB.  
