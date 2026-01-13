@@ -1,4 +1,4 @@
-# Image Denoising & Enhancement
+<h1 align="center">Image Denoising & Enhancement</h1>
 
 <p align="center">
   <b>A MATLAB-based Digital Image Processing project focused on noise modeling, denoising, enhancement, and quantitative evaluation using core ECE concepts.</b>
