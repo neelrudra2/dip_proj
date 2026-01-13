@@ -23,9 +23,9 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 
 ## 🎯 Key Objectives
 
-– Implemented **Mean, median, Wiener filters** to suppress **Gaussian noise, improving PSNR by up to 8-12 dB**.
-– Enhanced **image contrast using histogram equalization**, increasing visible **edge details by 30%** (visually).
-– Evaluated **filter performance using PSNR and MSE** across multiple noise levels for comparative analysis.
+– Implemented **Mean, median, Wiener filters** to suppress **Gaussian noise, improving PSNR by up to 8-12 dB**. <br>
+– Enhanced **image contrast using histogram equalization**, increasing visible **edge details by 30%** (visually). <br>
+– Evaluated **filter performance using PSNR and MSE** across multiple noise levels for comparative analysis. <br>
 
 ---
 
