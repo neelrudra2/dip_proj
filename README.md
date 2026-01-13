@@ -1,8 +1,4 @@
-# 🖼️ Image Denoising & Enhancement using Digital Image Processing (MATLAB)
-
-<p align="center">
-  <img src="imagea.jpeg" width="85%">
-</p>
+# Image Denoising & Enhancement using Digital Image Processing (MATLAB)
 
 <p align="center">
   <b>A MATLAB-based Digital Image Processing project focused on noise modeling, denoising, enhancement, and quantitative evaluation using core ECE concepts.</b>
@@ -43,7 +39,7 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Salt & Pepper Noise | Random black & white pixels | Transmission errors |
 
 <p align="center">
-  <img src="image.jpeg" width="80%">
+  <img src="image.jpeg" width="40%">
 </p>
 
 ---
@@ -57,7 +53,7 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Wiener Filter | Adaptive | Minimum MSE optimization |
 
 <p align="center">
-  <img src="image2.jpeg" width="85%">
+  <img src="image2.jpg" width="85%">
 </p>
 
 ---
@@ -73,7 +69,7 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 - Extracts prominent structural boundaries
 
 <p align="center">
-  <img src="assets/enhancement_edges.png" width="85%">
+  <img src="assets/enhancement_edges.png" width="40%">
 </p>
 
 ---
