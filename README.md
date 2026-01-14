@@ -73,10 +73,6 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Median Filter | Lower | Very Good |
 | Wiener Filter | Lowest | Best |
 
-<p align="center">
-  <img src="assets/metrics_plot.png" width="45%">
-</p>
-
 ---
 
 ## 🖼️ Results & Visual Output
@@ -92,10 +88,38 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 
 ---
 
-## 🖼️ Sample Output Images
+## 🖼️ Sample Output Images and Performance Metrics
+
+### Image Set 1
+
+<p align="left">
+  <img src="ImageA.jpg" width="40%">
+</p>
 
 <p align="center">
-  <img src="image.jpeg" width="40%">
+  <img src="ImageB.jpg" width="40%">
+</p>
+
+<p align="right">
+  <img src="ImageC.jpg" width="40%">
+</p>
+
+<p align="center">
+  <i>Representative output images showing denoising and enhancement stages.</i>
+</p>
+
+### Image Set 2
+
+<p align="left">
+  <img src="ImageD.jpg" width="40%">
+</p>
+
+<p align="center">
+  <img src="ImageE.jpg" width="40%">
+</p>
+
+<p align="right">
+  <img src="ImageF.jpg" width="40%">
 </p>
 
 <p align="center">
