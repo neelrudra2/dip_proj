@@ -100,17 +100,17 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
     </td>
     <td align="center">
       <img src="ImageB.jpg" width="100%">
-      <br><b>PSNR Metrics</b>
+      <br><b>PSNR Comparison</b>
     </td>
     <td align="center">
       <img src="ImageC.jpg" width="100%">
-      <br><b>MSE Metrics</b>
+      <br><b>MSE Comparison</b>
     </td>
   </tr>
 </table>
 
 <p align="center">
-  <i>Denoising results using Mean, Median, and Wiener filters.</i>
+  <i>Denoising results using Mean, Median, and Wiener filters</i>
 </p>
 
 
@@ -124,17 +124,17 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
     </td>
     <td align="center">
       <img src="ImageE.jpg" width="100%">
-      <br><b>PSNR Metrics</b>
+      <br><b>PSNR Comparison</b>
     </td>
     <td align="center">
       <img src="ImageF.jpg" width="100%">
-      <br><b>MSE Metrics</b>
+      <br><b>MSE Comparison</b>
     </td>
   </tr>
 </table>
 
 <p align="center">
-  <i>Original, noisy, and enhanced image comparison.</i>
+  <i>Original, noisy, and enhanced image comparison</i>
 </p>
 
 
