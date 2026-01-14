@@ -92,39 +92,51 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 
 ### Image Set 1
 
-<p align="left">
-  <img src="ImageA.jpg" width="40%">
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="ImageA.jpg" width="100%">
+      <br><b>Mean Filtered</b>
+    </td>
+    <td align="center">
+      <img src="ImageB.jpg" width="100%">
+      <br><b>Median Filtered</b>
+    </td>
+    <td align="center">
+      <img src="ImageC.jpg" width="100%">
+      <br><b>Wiener Filtered</b>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
-  <img src="ImageB.jpg" width="40%">
+  <i>Denoising results using Mean, Median, and Wiener filters.</i>
 </p>
 
-<p align="right">
-  <img src="ImageC.jpg" width="40%">
-</p>
-
-<p align="center">
-  <i>Representative output images showing denoising and enhancement stages.</i>
-</p>
 
 ### Image Set 2
 
-<p align="left">
-  <img src="ImageD.jpg" width="40%">
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="ImageD.jpg" width="100%">
+      <br><b>Original Image</b>
+    </td>
+    <td align="center">
+      <img src="ImageE.jpg" width="100%">
+      <br><b>Noisy Image</b>
+    </td>
+    <td align="center">
+      <img src="ImageF.jpg" width="100%">
+      <br><b>Enhanced Image</b>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
-  <img src="ImageE.jpg" width="40%">
+  <i>Original, noisy, and enhanced image comparison.</i>
 </p>
 
-<p align="right">
-  <img src="ImageF.jpg" width="40%">
-</p>
-
-<p align="center">
-  <i>Representative output images showing denoising and enhancement stages.</i>
-</p>
 
 ---
 
