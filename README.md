@@ -14,27 +14,26 @@
 
 ## 🔍 Project Overview
 
-This project demonstrates **real-world image degradation and restoration** using **classical Digital Image Processing (DIP) techniques** in MATLAB.  
-It simulates common noise conditions, applies appropriate filters, enhances image quality, extracts edges, and evaluates performance using standard quantitative metrics.
+This project demonstrates **image degradation and restoration** using **classical Digital Image Processing (DIP) techniques** implemented in MATLAB.  
+It simulates **Gaussian noise**, applies multiple **spatial domain denoising filters**, enhances image contrast, and evaluates performance using standard quantitative metrics.
 
-The project is **ECE-focused**, emphasizing **signal processing fundamentals** rather than black-box deep learning approaches.
+The project is **ECE-focused**, emphasizing **signal processing fundamentals** rather than data-driven or deep learning approaches.
 
 ---
 
 ## 🎯 Key Objectives
 
-- Implemented **Mean, median, Wiener filters** to suppress **Gaussian noise, improving PSNR by up to 8-12 dB**
-- Enhanced **image contrast using histogram equalization**, increasing visible **edge details by 30%** (visually)
+- Implemented **Mean, Median, and Wiener filters** to suppress **Gaussian noise**, improving PSNR by up to **8–12 dB**
+- Enhanced **image contrast using histogram equalization**, improving visual clarity and feature visibility
 - Evaluated **filter performance using PSNR and MSE** across multiple noise levels for comparative analysis
 
 ---
 
-## 🌫️ Noise Models Implemented
+## 🌫️ Noise Model Implemented
 
 | Noise Type | Description | Real-World Occurrence |
 |----------|------------|----------------------|
-| Gaussian Noise | Statistical noise with normal distribution | Sensors, thermal noise |
-| Salt & Pepper Noise | Random black & white pixels | Transmission errors |
+| Gaussian Noise | Statistical noise with normal distribution | Sensors, thermal noise, electronic circuits |
 
 ---
 
@@ -43,20 +42,17 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 | Filter | Noise Type Targeted | Key Property |
 |------|--------------------|-------------|
 | Mean Filter | Gaussian | Spatial averaging |
-| Median Filter | Salt & Pepper | Edge-preserving |
-| Wiener Filter | Adaptive | Minimum MSE optimization |
+| Median Filter | Gaussian (limited) | Impulse suppression |
+| Wiener Filter | Gaussian | Adaptive minimum MSE filtering |
 
 ---
 
-## ✨ Image Enhancement & Feature Extraction
+## ✨ Image Enhancement
 
 ### 🔹 Contrast Enhancement
 - Histogram Equalization
-- Enhances visibility in low-contrast images
-
-### 🔹 Edge Detection
-- Sobel Operator
-- Extracts prominent structural boundaries
+- Improves dynamic range and visibility in low-contrast images
+- Applied after optimal denoising (Wiener filtering)
 
 ---
 
@@ -66,19 +62,19 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 
 | Metric | Purpose |
 |------|--------|
-| MSE (Mean Square Error) | Pixel-wise error measurement |
-| PSNR (Peak Signal-to-Noise Ratio) | Image reconstruction quality |
+| MSE (Mean Square Error) | Pixel-wise reconstruction error |
+| PSNR (Peak Signal-to-Noise Ratio) | Image quality measurement |
 
-### Sample Results
+### Observed Performance Trend
 
 | Filter | MSE ↓ | PSNR ↑ |
 |------|------|--------|
 | Mean Filter | Moderate | Good |
-| Median Filter | Low | Very Good |
+| Median Filter | Lower | Very Good |
 | Wiener Filter | Lowest | Best |
 
 <p align="center">
-  <img src="assets/metrics_plot.png" width="40%">
+  <img src="assets/metrics_plot.png" width="45%">
 </p>
 
 ---
@@ -87,45 +83,31 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 
 | Stage | Output Description |
 |-----|-------------------|
-| Original Image | Clean reference |
-| Noisy Image | Degraded input |
-| Filtered Image | Noise suppression |
-| Enhanced Image | Contrast improvement |
-| Edge Image | Structural extraction |
+| Original Image | Reference input image |
+| Noisy Image | Gaussian noise corrupted image |
+| Mean Filtered Image | Smoothed output |
+| Median Filtered Image | Impulse reduction |
+| Wiener Filtered Image | Optimally denoised |
+| Enhanced Image | Contrast enhanced output |
 
 ---
 
-## 🔬 Visual Comparison: Before vs After Image Processing
-
-### 🔹 Image Set 1: Noise Removal Effect
-
-| Before Processing (Noisy Image) | After Processing (Denoised Image) |
-|--------------------------------|----------------------------------|
-| <img src="image.jpeg" width="100%"> | <img src="image.jpeg" width="100%"> |
+## 🖼️ Sample Output Images
 
 <p align="center">
-  <i>Visible reduction of Gaussian and Salt & Pepper noise using Median and Wiener filtering.</i>
+  <img src="image.jpeg" width="70%">
+</p>
+
+<p align="center">
+  <i>Representative output images showing denoising and enhancement stages.</i>
 </p>
 
 ---
-
-### 🔹 Image Set 2: Enhancement & Edge Detection Effect
-
-| Before Enhancement | After Enhancement & Edge Detection |
-|--------------------|-----------------------------------|
-| <img src="image2.jpg" width="100%"> | <img src="image2.jpg" width="100%"> |
-
-<p align="center">
-  <i>Improved contrast using histogram equalization and structural feature extraction using Sobel operator.</i>
-</p>
-
----
-
 
 ## 🏥 Applications
 
 - Medical Image Processing  
-- Surveillance and Security Systems  
+- Surveillance Systems  
 - Remote Sensing  
 - Image Transmission Systems  
 - Industrial Inspection  
@@ -136,14 +118,14 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 ## ▶️ How to Run
 
 1. Clone or download the repository  
-2. Place the input image as `image.jpg` in the project directory  
+2. Place the input image as `image3.jpeg` inside the `proj` folder  
 3. Open MATLAB  
 4. Run the script:
 
 ```matlab
 dip.m
 ```
-5. Observe output images and performance metrics
+5. Observe output images and performance graphs
 
 ---
 
