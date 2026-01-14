@@ -2,7 +2,7 @@ clc
 clear
 close all
 
-img = imread('image.jpeg');
+img = imread('image3.jpeg');
 
 if size(img,3) == 3
     img = rgb2gray(img);
@@ -10,71 +10,91 @@ end
 
 img = im2uint8(img);
 
+noise_var = [0.001 0.005 0.01 0.02];
+
+psnr_mean = zeros(1,length(noise_var));
+psnr_median = zeros(1,length(noise_var));
+psnr_wiener = zeros(1,length(noise_var));
+
+mse_mean = zeros(1,length(noise_var));
+mse_median = zeros(1,length(noise_var));
+mse_wiener = zeros(1,length(noise_var));
+
+h = fspecial('average',[3 3]);
+
+for i = 1:length(noise_var)
+    noisy_img = imnoise(img,'gaussian',0,noise_var(i));
+
+    mean_img = imfilter(noisy_img,h,'replicate');
+    median_img = medfilt2(noisy_img,[3 3]);
+    wiener_img = wiener2(noisy_img,[5 5]);
+
+    mse_mean(i) = immse(img,mean_img);
+    psnr_mean(i) = psnr(mean_img,img);
+
+    mse_median(i) = immse(img,median_img);
+    psnr_median(i) = psnr(median_img,img);
+
+    mse_wiener(i) = immse(img,wiener_img);
+    psnr_wiener(i) = psnr(wiener_img,img);
+end
+
+noisy_img = imnoise(img,'gaussian',0,0.01);
+mean_filtered = imfilter(noisy_img,h,'replicate');
+median_filtered = medfilt2(noisy_img,[3 3]);
+wiener_filtered = wiener2(noisy_img,[5 5]);
+hist_eq = histeq(wiener_filtered);
+
 figure
+
+subplot(2,3,1)
 imshow(img)
 title('Original Image')
 
-img_gaussian = imnoise(img,'gaussian',0,0.01);
-img_sp = imnoise(img,'salt & pepper',0.05);
-
-h = fspecial('average',[3 3]);
-mean_filtered = imfilter(img_gaussian,h);
-
-median_filtered = medfilt2(img_sp,[3 3]);
-
-wiener_filtered = wiener2(img_gaussian,[5 5]);
-
-enhanced_img = histeq(median_filtered);
-
-edge_img = edge(enhanced_img,'sobel');
-
-mse_mean = immse(img,mean_filtered);
-psnr_mean = psnr(mean_filtered,img);
-
-mse_median = immse(img,median_filtered);
-psnr_median = psnr(median_filtered,img);
-
-mse_wiener = immse(img,wiener_filtered);
-psnr_wiener = psnr(wiener_filtered,img);
-
-fprintf('Mean Filter  MSE %.4f  PSNR %.2f dB\n',mse_mean,psnr_mean);
-fprintf('Median Filter  MSE %.4f  PSNR %.2f dB\n',mse_median,psnr_median);
-fprintf('Wiener Filter  MSE %.4f  PSNR %.2f dB\n',mse_wiener,psnr_wiener);
-
-figure
-
-subplot(3,3,1)
-imshow(img)
-title('Original')
-
-subplot(3,3,2)
-imshow(img_gaussian)
-title('Gaussian Noise')
-
-subplot(3,3,3)
+subplot(2,3,2)
 imshow(mean_filtered)
-title('Mean Filter')
+title('Mean Filtered')
 
-subplot(3,3,4)
-imshow(img_sp)
-title('Salt & Pepper Noise')
-
-subplot(3,3,5)
+subplot(2,3,3)
 imshow(median_filtered)
-title('Median Filter')
+title('Median Filtered')
 
-subplot(3,3,6)
+subplot(2,3,4)
 imshow(wiener_filtered)
-title('Wiener Filter')
+title('Wiener Filtered')
 
-subplot(3,3,7)
-imshow(enhanced_img)
+subplot(2,3,5)
+imshow(hist_eq)
 title('Histogram Equalized')
 
-subplot(3,3,8)
-imshow(edge_img)
-title('Sobel Edge')
-
-subplot(3,3,9)
-imshowpair(img,enhanced_img,'montage')
+subplot(2,3,6)
+imshowpair(img,hist_eq,'montage')
 title('Original vs Enhanced')
+
+figure
+plot(noise_var,psnr_mean,'-o','LineWidth',2)
+hold on
+plot(noise_var,psnr_median,'-s','LineWidth',2)
+plot(noise_var,psnr_wiener,'-^','LineWidth',2)
+grid on
+xlabel('Noise Variance')
+ylabel('PSNR (dB)')
+legend('Mean','Median','Wiener')
+title('PSNR Comparison')
+
+figure
+plot(noise_var,mse_mean,'-o','LineWidth',2)
+hold on
+plot(noise_var,mse_median,'-s','LineWidth',2)
+plot(noise_var,mse_wiener,'-^','LineWidth',2)
+grid on
+xlabel('Noise Variance')
+ylabel('MSE')
+legend('Mean','Median','Wiener')
+title('MSE Comparison')
+
+fprintf('NoiseVar   PSNR_Mean   PSNR_Median   PSNR_Wiener\n')
+for i = 1:length(noise_var)
+    fprintf('%.4f     %.2f dB     %.2f dB        %.2f dB\n', ...
+        noise_var(i),psnr_mean(i),psnr_median(i),psnr_wiener(i))
+end
