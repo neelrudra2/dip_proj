@@ -96,15 +96,15 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
   <tr>
     <td align="center">
       <img src="ImageA.jpg" width="100%">
-      <br><b>Mean Filtered</b>
+      <br><b>Original Image vs Enhanced Images</b>
     </td>
     <td align="center">
       <img src="ImageB.jpg" width="100%">
-      <br><b>Median Filtered</b>
+      <br><b>PSNR Metrics</b>
     </td>
     <td align="center">
       <img src="ImageC.jpg" width="100%">
-      <br><b>Wiener Filtered</b>
+      <br><b>MSE Metrics</b>
     </td>
   </tr>
 </table>
@@ -120,15 +120,15 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
   <tr>
     <td align="center">
       <img src="ImageD.jpg" width="100%">
-      <br><b>Original Image</b>
+      <br><b>Original Image vs Enhanced Images</b>
     </td>
     <td align="center">
       <img src="ImageE.jpg" width="100%">
-      <br><b>Noisy Image</b>
+      <br><b>PSNR Metrics</b>
     </td>
     <td align="center">
       <img src="ImageF.jpg" width="100%">
-      <br><b>Enhanced Image</b>
+      <br><b>MSE Metrics</b>
     </td>
   </tr>
 </table>
