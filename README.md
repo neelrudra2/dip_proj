@@ -95,7 +95,7 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 ## 🖼️ Sample Output Images
 
 <p align="center">
-  <img src="image.jpeg" width="70%">
+  <img src="image.jpeg" width="40%">
 </p>
 
 <p align="center">
@@ -118,13 +118,14 @@ The project is **ECE-focused**, emphasizing **signal processing fundamentals** r
 ## ▶️ How to Run
 
 1. Clone or download the repository  
-2. Place the input image as `image3.jpeg` inside the `proj` folder  
+2. Place the input image inside the project folder  
 3. Open MATLAB  
 4. Run the script:
 
 ```matlab
 dip.m
 ```
+
 5. Observe output images and performance graphs
 
 ---
